@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/form.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/potvrda.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('partials/header.ejs') %>
+
+<div class="cont">
+    <form action="" method="POST" class="form">
+        <input type="text" id="" class="" name="potvrdaInput" placeholder="Unesite kod">
+        <div>
+            <button type="submit" name="" class="" id="">POTVRDI</button>
+        </div>
+        <div class="errMsg">
+            <%= errMsg %>
+        </div>
+    </form>
+</div>
+    <script src="/public/js/header.js"></script>
+</body>
+</html>

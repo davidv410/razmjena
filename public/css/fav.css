@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+.fav-btn{
+    width: 100px;
+    background-color: #002149;
+    color: white;
+    height: 23px;
+    border: none;
+    cursor: pointer;
+    font-family: Sora-Light;
+}
+
+.obrisi-btn {
+    background-color: rgb(230, 64, 64);
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.left {
+    width: 50%;
+}
+
+.fav-control {
+width: 100%;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #002149;
+}
+
+.ocisti-fav {
+    width:150px;
+    background-color: rgb(230, 64, 64);
+    color: white;
+    height: 23px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0 0 0 10px;
+    font-family: Sora-Light;
+}
+
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.title-inside {
+    font-family: Sora-Bold;
+    width: 100%;
+    font-size: 5em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .title-inside {
+        font-size: 3.5em;
+    }
+}
+

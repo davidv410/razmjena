@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/uredi.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+
+
+<div class="title">
+    <div class="title-inside">UREDI ARTIKAL</div>
+</div>
+    <div class="main-cont">
+    <% userData.forEach((item) => { %>
+    <form action="" method="POST">
+        <ul>
+                <li>
+                    <div class="item"><%= item.naslov %></div>
+                    <button class="change" value="first" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <input type="text" class="changeInput first" id="first" name="naslov">
+                </li>
+                <li>
+                    <div class="item"><%= item.razred %></div>
+                    <button class="change" value="second" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <select  class="changeInput second" id="second" name="razred">
+                        <option disabled selected value class="default-opt">Razred</option>
+                        <option value="1.">1.</option>
+                        <option value="2.">2.</option>
+                        <option value="3.">3.</option>
+                        <option value="4.">4.</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="item"><%= item.smjer%></div>
+                    <button class="change" value="third" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <select class="changeInput third" id="third" name="smjer">
+                        <option disabled selected value class="default-opt">smjer</option>
+                        <option value="Web Dizajn">Web Dizajn</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Turisticka">Turisticka</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="item"><%= item.razlog %></div>
+                    <button class="change" value="fourth" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <select class="changeInput fourth" id="fourth" name="razlog">
+                        <option disabled selected value class="default-opt">Razlog oglasa</option>
+                        <option value="prodaja">Prodaja</option>
+                        <option value="razmjena">Razmjena</option>
+                        <option value="prodaja/razmjena">Prodaja/Razmjena</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="item"><%= item.cijena %></div>
+                    <button class="change" value="fifth" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <input type="text" class="changeInput fifth" id="fifth" name="cijena">
+                </li>
+                <li>
+                    <div class="item"><%= item.stanje %></div>
+                    <button class="change" value="sixth" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <select class="changeInput sixth" id="sixth" name="stanje">
+                        <option disabled selected value class="default-opt">Stanje artikla</option>
+                        <option value="novo">Novo</option>
+                        <option value="korišteno">Korišteno</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="item"><%= item.opis %></div>
+                    <button class="change" value="seventh" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                    <input type="text" class="changeInput seventh" id="seventh" name="opis">
+                </li>
+        </ul>
+        <button type="submit" class="submitBtn" id="submitBtn">SPREMI PROMJENE</button>
+    </form>
+<% }) %>
+</div>
+
+<script src="/public/js/uredi.js"></script>
+<script src="/public/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+.main {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Sora-Light;
+}
+
+.inside{
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border: 2px solid rgb(26, 26, 26);
+    background-color: rgba(255, 255, 255, 0);
+    font-family: Sora-Light;
+    cursor: pointer;
+}

@@ -1,0 +1,67 @@
+
+.artikl-div-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.uredi-btn{
+    background-color: #002149;
+}
+
+.obrisi-btn{
+    background-color: #BA0000;
+}
+
+.otvori {
+    background-color: #002149;
+}
+
+.m-btn {
+    width: 100px;
+    height: 23px;
+    border: none;
+    color: white;
+    font-family: Sora-Light;
+    cursor: pointer;
+
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fa-trash {
+   
+    color: var(--input-color);
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.title-inside {
+    font-family: Sora-Bold;
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 520px){
+    .title-inside {
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,29 @@
+<header id="header">
+    <div class="header-wrap">
+        <div class="left-div">
+            <a href="/"><img src="/public/assets/images/newlogo.png" class="logo"></a>
+        </div>
+        
+    <div class="right-div">
+            <ul id="ul-nav" class="nav-ul">
+                <li class="nav-li home"><a href="/">HOME</a></li>
+            <%if (locals.session.loggedin) { %>
+                <li class="nav-li"><a href="/moje-objave">MOJE OBJAVE</a></li>
+                <li class="nav-li"><a href="/create">OBJAVI</a></li>
+                <li class="nav-li"><a href="/favoriti"><i class="fa-solid fa-bookmark fa"></i></a></li>
+                <li class="nav-li"><a href="/admin"><i class="fa-regular fa-user fa"></i></a></li>
+                <li class="nav-li"><a href="/logout"><i class="fa-solid fa-right-from-bracket fa"></i></a></li>
+            <%} else {%>
+                <li class="nav-li"><a href="/register">REGISTER</a></li>
+               <li class="nav-li"><a href="/login">LOGIN</a></li>
+            <%}%>
+            </ul>
+
+        <div class="ham-wrap" id="ham-wrap">
+            <div class="hamburger" id="hamburger"></div>
+        </div>
+    </div>
+        
+      
+    </div>
+</header>

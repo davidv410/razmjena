@@ -1,0 +1,265 @@
+:root {
+    --input-color: #1B1B1B;
+    --input-bg-color: #f5f5f5;
+    --input-placeholder: #959595;
+}
+
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+a {
+    color: #002149;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+.main-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.artikl-ul {
+    margin: 0 10px;
+    font-family: Sora-Light;
+    font-size: 15px;
+}
+
+.artikl-li {
+    list-style-type: none;
+}
+
+
+.artikl-div-top {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.otvori-btn {
+    width: 90%;
+    height: 35px;
+    margin:0 0 10px 0;
+    visibility: hidden;
+    border: none;
+    font-family: Sora-Light;
+    background-color: var(--input-color);
+    color: white;
+}
+
+
+.artikl-div-bottom {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #002149;
+    color: #002149;
+}
+
+.artikl-left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.artikl-right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.vise-div {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.vise-btn {
+    width: 100%;
+    height: 100%;
+    background-color: #002149;
+    color: white;
+    font-size: 13px;
+    border: none;
+    font-family: Sora-Light;
+    cursor: pointer;
+}
+
+.fa-arrow-right {
+    margin-left:10px;
+}
+
+
+
+.artikl-div {
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    overflow: hidden;
+    /* border-radius: 10px 10px 0 0 ; */
+}
+
+
+.artikl-div:hover .otvori-btn {
+    visibility: visible;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 2px solid #002149; 
+}
+
+input[type="checkbox"]:checked {
+    width: 15px;
+    height: 15px;
+    background-image: url('./assets/images/check.png');
+    background-size: contain;
+    background-color: #002149;
+}
+
+
+.filter-div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin-top: -260px;
+    transition: 350ms;
+    color: #002149;
+}
+
+.showFilter {
+    margin-top: 0;
+}
+
+
+.filter-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.filter-inside {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-icon {
+    color: #002149;
+}
+
+.main-label {
+    margin-left: -1px;
+
+}
+
+.opcije {
+    margin:0 20px;
+    margin-bottom: 20px;
+}
+
+.osvjezi-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.osvjezi{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    color: #002149;
+    font-family: Sora-Bold;
+    background-color:   rgb(255, 255, 255);
+    border: 2px solid #002149;
+}
+
+label {
+    margin: 0 0 0 10px;
+}
+
+
+.filter-btn-div {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn-wrap {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#filter-btn{
+    background-color: #1b1b1b00;
+    border: none;
+    font-size: 20px;
+}
+.filter-icon {
+    width: 30px;
+    background-color: #1b1b1b00;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 710px) {
+    .filter-div{
+        margin-top: -650px;
+    }
+
+    .showFilter {
+        margin-top: 0;
+    }
+
+    .filter-inside{
+        flex-direction: column;
+    }
+}
+
+

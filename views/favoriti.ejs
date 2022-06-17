@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/fav.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+    <div class="title">
+        <div class="title-inside">FAVORITI</div>
+    </div>
+<div class="fav-control">
+    Broj spremljenih artikala: <%= userData.length %>
+    <form action="/ocisti-fav" method="post">
+        <button class="ocisti-fav">OCISTI FAVORITE</button>
+    </form>
+</div>
+<div class="main-wrap">
+
+        <% userData.forEach((item) => { %>   
+            <div class="artikl-div">
+                <div class="artikl-div-top">
+                <img src="../public/assets/images/<%= item.artikl_image %>" class="image">
+                </div>
+    
+                <div class="artikl-div-bottom">
+                    <div class="left">
+                        <ul class="artikl-ul">
+                                <li class="artikl-li"><%= item.naslov %></li>
+                                <li class="artikl-li"><%= item.smjer %></li>
+                                <li class="artikl-li"><%= item.razred + ' razred' %></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <form action="/fav-otvori" method="POST">
+                            <div class="otvori-btn-div"><button class="otvori fav-btn" value="<%= item.artikl_id %>" name="artikl_id">OTVORI</button></div>
+                        </form>
+                        <form action="/obrisi-fav" method="POST">
+                            <div class="obrisi-btn-div"><button class="obrisi-btn fav-btn" value="<%= item.artikl_id %>" name="artikl_id">OBRISI IZ FAV</button></div>
+                        </form>
+                    </div>
+                </div>
+    
+            </div>
+        
+        <% }) %>
+</div>                  
+
+
+<script src="/public/js/header.js"></script>
+</body>
+</html>

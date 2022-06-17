@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+
+<div class="filter-btn-div">
+    <div class="filter-btn-wrap">
+        <button id="filter-btn">
+            <!-- <i class="fa-solid fa-sort filter-icon"></i> -->
+            <i class="fa-solid fa-angles-down filter-icon"></i>
+        </button>
+    </div>
+</div>
+    
+
+<div class="main-wrap">
+    <%- include('partials/filter.ejs') %>
+    <% userData.forEach((item) => { %>
+        <form action="/artikl" method="POST">
+            <div class="artikl-div">
+            <div class="artikl-div-top">
+                <img src="../public/assets/images/<%= item.artikl_image %>" class="image">
+            </div>
+
+            <div class="artikl-div-bottom">
+                <div class="artikl-left">
+                    <ul class="artikl-ul">
+                            <li class="artikl-li"><%= item.naslov %></li>
+                            <li class="artikl-li"><%= item.smjer %></li>
+                            <li class="artikl-li"><%= item.razred + ' razred' %></li>
+                    </ul>
+                </div>
+                    <div class="artikl-right">
+                       <div class="vise-div"><button class="vise-btn" type="submit" name="artikl_id" value="<%= item.artikl_id %>">VIŠE<i class="fa-solid fa-arrow-right"></i></button></div>
+                    </div>
+            </div>
+
+        </div>
+    </form>
+      <% }) %>
+</div>
+
+
+
+<script src="/public/js/main.js"></script>
+<script src="/public/js/header.js"></script>
+</body>
+</html>

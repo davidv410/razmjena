@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/contact-form.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="title">
+        <div class="title-inside">KONTAKT</div>
+    </div>
+<div class="receiver">
+    <div class="receiver-inside">Mail za: <%= receiver %></div>
+</div>
+<div class="main">
+<div class="contact-wrap">
+    <form action="/send-email-form" method="POST" class="contact-form">
+        <div class="line one">
+            <input type="text" name="firstName" placeholder="Ime" class="first-name">
+            <input type="text" name="lastName" placeholder="Prezime" class="last-name">
+        </div>
+        <div class="line">
+            <input type="text" name="subject" placeholder="Subjekt">
+        </div>
+        <div class="line">
+            <textarea type="text" name="message" placeholder="Poruka" class="message"></textarea>
+        </div>
+        <div class="line">
+            <button type="submit" class="submit">SUBMIT</button>
+        </div>
+        <input name="receiver" value="<%= receiver %>" type="hidden"> 
+    </form>
+</div>
+</div>
+
+<script src="/public/js/main.js"></script>
+<script src="/public/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+
+
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+.form-wrap {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: fit-content;
+}
+
+.left { 
+    height: 300px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    height: 300px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 -5px ;
+}
+
+.textarea-wrap {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.textarea {
+    width: 85%;
+    height: 100%;
+    border: 2px solid #002149;
+    background-color: white;
+    margin: 5px 0;
+    padding:0 0 0 20px;
+    font-family: Sora-Light;
+    font-size: 18px;
+    padding: 10px 0 0 10px;
+    color: #90aed1;
+}
+
+.textarea::placeholder {
+    color: #90aed1;
+}
+
+.right-fill {
+    height: 95%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #002149;
+}
+
+
+
+.form-input {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #002149;
+    background-color: white;
+    margin: 5px 0;
+    padding:0 0 0 20px;
+    font-family: Sora-Light;
+    font-size: 18px;
+    cursor: pointer;
+    color: #90aed1;
+}
+
+.form-input::placeholder {
+    color: #90aed1;
+}
+
+.form-button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #002149;
+    color: white;
+    font-family: Sora-Light;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px 0 0 0;
+}
+
+.btn-wrap {
+    width: 85%;
+}
+
+.razlog {
+    width: 400px;
+}
+
+.short {
+    width: 290px;
+}
+
+
+
+.cijena {
+    width: 100px;
+    margin: 5px 0 0 10px;
+}
+
+#cijenaDiv {
+    display: none;
+}
+
+.razlogCijena {
+    display: flex;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.title-inside {
+    font-family: Sora-Bold;
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 650px){
+    .title-inside {
+        font-size: 3em;
+    }
+
+    .form-input {
+        width: 300px;
+    }
+
+    .textarea-wrap{
+        height: 100px;
+        width: 90%;
+    }
+
+
+    .right {
+        height: 100px;
+        width: 85%;
+        margin: 0 -1px 0 0;
+    }
+
+    
+.btn-wrap {
+    width: 77%;
+}
+
+}
+
+
+

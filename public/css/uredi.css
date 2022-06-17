@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+
+.first {visibility: hidden;}
+.second {visibility: hidden;}
+.third {visibility: hidden;}
+.fourth {visibility: hidden;}
+.fifth {visibility: hidden;}
+.sixth {visibility: hidden;}
+.seventh {visibility: hidden;}
+
+.visible {visibility: visible;}
+
+
+.main-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.item {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid #002149;
+    overflow: hidden;
+}
+
+li {
+    display: flex;
+    margin: 0 0 5px 0;
+}
+
+.change {
+    font-size: 15px;
+    width: 150px;
+    background-color: #002149;
+    color: white;
+    border: none;
+    font-family: Sora-Light;
+    cursor: pointer;
+}
+
+.fa-arrow-right {
+    margin:0 0 0 10px;
+}
+
+.submitBtn {
+    font-size: 15px;
+    width: 180px;
+    height: 40px;
+    background-color: #002149;
+    color: white;
+    border: none;
+    font-family: Sora-Bold;
+    cursor: pointer;
+    margin: 20px 0 0 0;
+}
+
+.changeInput {
+    width: 180px;
+    height: 40px;
+    border: none;
+    border: 2px solid #002149;
+    padding: 0 0 0 10px;
+    font-family: Sora-Light;
+}
+
+form {
+    border-bottom: 3px solid #002149;
+    border-top: 3px solid #002149;
+    padding: 30px;
+}
+
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #002149;
+}
+
+.title-inside {
+    font-family: Sora-Bold;
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px){
+    .title-inside {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    
+    .change{
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .item {
+        width: 130px;
+        font-size: 15px;
+    }
+
+    .changeInput {
+        width: 130px;
+        height: 40px;
+    }
+
+    .submitBtn {
+        width: 150px;
+        font-size: 12px;
+    }
+}

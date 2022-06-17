@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/create.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('partials/header.ejs') %>
+
+
+    <div class="title">
+        <div class="title-inside">STVORI ARTIKAL</div>
+    </div>
+<div class="form-wrap">
+    <form action="" method="POST" class="form" enctype="multipart/form-data">
+
+
+
+
+
+
+    <div class="left">
+        <div>
+                <input type="text" name="naslov" id="naslov" class="form-input" placeholder="Naslov" required>
+        </div>
+        <div>
+                <select name="smjer" id="smjer" class="form-input" required>
+                    <option disabled selected value class="default-opt">smjer</option>
+                    <option value="Web Dizajn">Web Dizajn</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Turisticka">Turistička</option>
+                    <option value="Elektrotehnicka">Elektrotehnička</option>
+                    <option value="CNC programer">CNC programiranje</option>
+                    <option value="Vodoinstalater">Vodoinstalater</option>
+                   
+
+                </select>
+        </div>
+        <div>
+                <select name="razred" id="razred" class="form-input" required>
+                    <option disabled selected value class="default-opt">Razred</option>
+                    <option value="1.">1.</option>
+                    <option value="2.">2.</option>
+                    <option value="3.">3.</option>
+                    <option value="4.">4.</option>
+                </select>
+        </div>
+        <div class="razlogCijena">
+                <select name="razlog" id="razlog" class="form-input razlog" required>
+                    <option disabled selected value class="default-opt">Razlog oglasa</option>
+                    <option value="prodaja">Prodaja</option>
+                    <option value="razmjena">Razmjena</option>
+                    <option value="prodaja/razmjena">Prodaja/Razmjena</option>
+                </select>
+
+                <div id="cijenaDiv">
+                    <input type="number" name="cijena" id="cijena" class="form-input cijena" placeholder="Cijena">
+                 </div>
+        </div> 
+        
+        <div>
+                <select name="stanje" id="stanje" class="form-input" required>
+                    <option disabled selected value class="default-opt">Stanje artikla</option>
+                    <option value="novo">Novo</option>
+                    <option value="korišteno">Korišteno</option>
+                </select>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+        <div class="right">
+            <div class="right-fill">
+                <input type="file" name="image" accept='image/*' >
+            </div>
+        </div>
+
+
+            <div class="textarea-wrap"> 
+                    <textarea name="opis" id="opis" class="textarea" placeholder="Detaljan opis"></textarea>
+            </div> 
+
+    <div class="btn-wrap">
+        <button type="submit" class="form-button">OBJAVI</button>
+    </div>
+
+    </form>
+</div>
+
+<script src="/public/js/create.js"></script>
+<script src="/public/js/header.js"></script>
+</body>
+</html>

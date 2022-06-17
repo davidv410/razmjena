@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/admin.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('partials/header.ejs') %>
+
+    <div class="title">
+        <div class="title-inside">KORISNIK</div>
+    </div>
+    
+    <% userData.forEach((item) => { %>
+    <div class="user">
+        <div>
+            <div class="img-div">
+                <img src="../public/assets/images/<%= item.user_image %>" class="user-img">
+            </div>
+        
+        </div>
+        <div class="info-div">
+            <div class="user-inside">Korisnik: <%= item.name %></div>
+            <div class="user-inside">Email: <%= item.email %></div>
+            <div class="user-inside">Broj: <%= item.broj %></div>
+        </div>
+    </div>
+    <% }) %>
+
+<div class="wrap">
+    <%if (locals.session.loggedin) { %>
+
+        <form action="/update-user" enctype="multipart/form-data" method="post" class="form">
+
+            <div class="item-wrap">
+                <div class="item">SLIKA</div>
+                <button class="change" value="first" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                <input type="file" name="image" accept='image/*' class="changeInput first" id="first" class="hidden">
+            </div>
+
+
+            <div class="item-wrap">
+                <div class="item">BROJ</div>
+                <button class="change" value="second" type="button">PROMJENI<i class="fa-solid fa-arrow-right"></i></button>
+                <input type="text" class="changeInput second" id="second" name="broj" placeholder="000-000-000">
+            </div>
+
+
+
+            <button type="submit" class="submitBtn" id="submitBtn">SPREMI PROMJENE</button>
+          </form> 
+          
+    <% } %>
+</div>
+    <script src="/public/js/admin.js"></script>
+    <script src="/public/js/header.js"></script>
+</body>
+</html>

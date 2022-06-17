@@ -1,0 +1,96 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+.form-wrap {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.err-msg {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-head {
+    font-size: 79px;
+    font-family: Sora-Bold;
+    text-align: center;
+    color: #002149;
+}
+
+.form-input {
+    width: 400px;
+    height: 60px;
+    border: 2px solid #002149;
+    /* border-radius: 8px; */
+    background-color: white;
+    margin: 5px 0;
+    padding:0 0 0 20px;
+    font-family: Sora-Light;
+    font-size: 18px;
+}
+
+.form-input::placeholder {
+    color: #5382bb;
+}
+
+.form-button {
+    width: 400px;
+    height: 60px;
+    border: none;
+    background-color: #002149;
+    color: white;
+    font-family: Sora-Light;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.textarea {
+    width: 900px;
+    height: 200px;
+}
+
+.upper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    background-color: red;
+}
+
+
+@media only screen and (max-width: 410px) {
+    .form-input {
+        width: 350px;
+    }
+
+    .form-button  {
+        width: 350px;
+    }
+}

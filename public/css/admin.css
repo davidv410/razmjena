@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+.item-wrap {
+    display: flex;
+    margin: 0 0 5px 0;
+}
+
+.item {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid #002149;
+    color: #002149;
+}
+
+.change {
+    font-size: 15px;
+    width: 150px;
+    background-color: #002149;
+    color: white;
+    border: none;
+    font-family: Sora-Light;
+    cursor: pointer;
+}
+
+.changeInput {
+    width: 180px;
+    height: 40px;
+    border: none;
+    border: 2px solid #002149;
+    padding: 0 0 0 10px;
+    font-family: Sora-Light;
+}
+
+.fa-arrow-right {
+    margin:0 0 0 10px;
+}
+
+.first {
+    visibility: hidden;
+    text-align: center;
+    }
+
+.second {visibility: hidden;}
+.visible {visibility: visible;}
+
+
+
+.first::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .first::before {
+    content: 'Upload image';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    margin: 2.5px 0 0 20px;
+  }
+  .first:hover::before {
+    border-color: black;
+  }
+  .first:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  .submitBtn {
+    font-size: 15px;
+    width: 180px;
+    height: 40px;
+    background-color: #002149;
+    color: white;
+    border: none;
+    font-family: Sora-Bold;
+    cursor: pointer;
+    margin: 30px 0 0 0;
+}
+
+.form {
+    width: fit-content;
+    border-top: 3px solid #002149;
+    border-bottom: 3px solid #002149;
+    padding: 30px 0 20px 0;
+}
+
+.wrap {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title-inside {
+    font-family: Sora-Bold;
+    width: 100%;
+    font-size: 5em;
+    text-align: center;
+    color: #002149;
+}
+
+.user {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #002149;
+}
+
+.user-inside {
+    font-family: Sora-Light;
+    width: 100%;
+    margin: 0 0 0 20px;
+    text-align: left;
+}
+
+.img-div {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+@media only screen and (max-width: 560px) {
+    
+    
+    .change{
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .item {
+        width: 130px;
+        font-size: 15px;
+    }
+
+    .changeInput {
+        width: 130px;
+        height: 40px;
+    }
+
+    .submitBtn {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .title-inside {
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,271 @@
+@font-face {
+    font-family: Sora-Light;
+    src: url(/public/assets/fonts/sora/Sora-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Sora-Bold;
+    src: url(/public/assets/fonts/sora/Sora-Bold.ttf);
+  }
+
+
+.main-wrap {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Sora-Light;
+    color: #002149;
+}
+
+.left {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+.right-inside {
+    width: 400px;
+    height: 100%;
+
+}
+
+.naslov {
+    font-size: 30px;
+    font-family: Sora-Bold;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.razred {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.razlog {
+    width: fit-content;
+    height: 30px;
+    border-bottom: 2px solid #002149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px 0 5px 0;
+    padding: 0 5px;
+}
+
+.cijena {
+    width: fit-content;
+    height: 30px;
+    border-bottom: 2px solid #002149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    margin:0 0 5px 0;
+}
+
+.stanje {
+    width: fit-content;
+    height: 30px;
+    border-bottom: 2px solid #002149;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.opis {
+    width: 100%;
+    height: fit-content;
+    margin: 40px 0;
+}
+
+.dodaj-btn {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #002149;
+    background-color: white;
+    font-family: Sora-Bold;
+    cursor: pointer;
+    color: #002149;
+}
+
+
+.obrisi-fav {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #004CBA;
+    background-color: rgb(255, 255, 255);
+    font-family: Sora-Bold;
+    cursor: pointer;
+}
+
+.obrisi-fav::after {
+    color: #004CBA;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f058";
+    font-size: 20px;
+}
+
+.obrisi-fav:hover::after {
+    font-family: Sora-Bold;
+    content: "Ukloni iz favorita";
+    color: #004CBA;
+    font-size: 15px;
+}
+
+
+.fa-circle-check{
+    font-size: 25px;
+    color: rgb(82, 255, 82);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-wrap {
+    /* margin: 30px 0 30px 30px; */
+    width: 500px;
+    height: 600px;
+}
+
+.user {
+    width: 100%;
+    height: 100px;
+    margin: 40px 0;
+    display: flex;
+}
+
+.user-img-div {
+    width: 100px;
+    height: 100%;
+    background-color: antiqueblack;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover; 
+    overflow: hidden;
+}
+
+.user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    margin: 0 20px;
+    font-family: Sora-Light;
+}
+
+.user-ul {
+    list-style-type: none;
+}
+
+.user-name {
+    font-size: 17px;
+
+}
+
+.user-li {
+    display: flex;
+}
+
+h4 {
+    color: rgb(180, 180, 180);
+}
+
+.poruka-btn {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0 0 0;
+    border: 2px solid #002149;
+    font-family: Sora-Bold;
+    background-color: white;
+    cursor: pointer;
+    color: #002149;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .left {
+        width: 500px;
+        height: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .right{
+        width: 500px;
+        height: fit-content;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .naslov {
+        font-size: 25px;
+        height: 25px;
+        margin: 10px 0 0 0;
+    }
+
+    .razlog {
+        all: unset;
+        width: fit-content;
+        height: 24px;
+        border-bottom: 2px solid #002149;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .cijena {
+        all: unset;
+        width: fit-content;
+        height: 24px;
+        border-bottom: 2px solid #002149;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .stanje {
+        all: unset;
+        width: fit-content;
+        height: fit-content;
+        border-bottom: 2px solid #002149;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .opis {
+        margin: 10px 0;
+    }
+
+    .user-li {
+        color: black;
+    }
+
+    .right-inside{
+        margin: 20px 0;
+    }
+
+
+  }
